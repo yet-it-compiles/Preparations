@@ -1,38 +1,18 @@
+/**
+ * Simple module which demonstrates my first attempt at creating an ArrayList in Java.
+ */
 package package3.DataStructureImplementations;
 
 public class DynamicArray {
-    public Object[] underlyingArray;
-    public int arrayCapacity = 10;
-    public int sizeOfArray = 0;
+    private Object[] underlyingArray;
+    private final int DEFAULT_CAPACITY = 10;
+    private int sizeOfArray = 0;
 
-    public DynamicArray(){
-        underlyingArray = new Object[this.arrayCapacity];
-    }
+    public DynamicArray(){this.underlyingArray = new Object[DEFAULT_CAPACITY];}
 
-    public DynamicArray(int capacity){
-        underlyingArray = new Object[capacity];
-    }
-
-    public void add(Object e){
-        if(this.sizeOfArray == this.underlyingArray.length)
-            ensureCapacity();
-        this.underlyingArray[sizeOfArray++] = e;
-    }
-
-    public int size(){
-        return this.sizeOfArray;
-    }
-
-    public void ensureCapacity(){
-        this.arrayCapacity = arrayCapacity * 2;
-        Object[] copiedArray = new Object[this.arrayCapacity];
-    }
-
-    public String toString(){
-        StringBuilder result = null;
-        for (Object eachObject : this.underlyingArray)
-            result.append(eachObject).append(" ");
-        return "";
+    public void add(Object newElement){
+        this.underlyingArray[this.sizeOfArray] = newElement;
+        sizeOfArray++;
     }
 
 }
