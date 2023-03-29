@@ -3,3 +3,8 @@
 
 # Preparations
 This repository offers algorithmic solutions for various problems gathered from multiple platforms, organized by platform and difficulty level. Each submission includes site-generated feedback for improved learning.
+
+
+# Sites Used
+* LeetCode
+* Hacker Rank
